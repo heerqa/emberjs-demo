@@ -6,6 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('createtaskforme');
+  this.route('createtaskforother');
+  this.route('listtaskforother');
+  this.route('listtaskforme');
 });
 
 export default Router;

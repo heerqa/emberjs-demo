@@ -5,8 +5,8 @@
       <ul>
          <li class='has-sub'><a href='#'><span>Create Task</span></a>
             <ul>
-               <li><a href='#'><span>For me</span></a></li>
-               <li class='last'><a href='#'><span>For other</span></a></li>
+               <li>{{#link-to 'createtaskforme' }}<span>For me</span>{{/link-to}}</li>
+               <li class='last'>{{#link-to 'createtaskforother' }}<span>For other</span>{{/link-to}}</li>
             </ul>
          </li>
          <li class='has-sub'><a href='#'><span>Task List</span></a>
@@ -22,7 +22,9 @@
 </ul>
 </div>
 <div id="body">
-<h1>This is show demo app in EmberJS, the futuristic app </h1>
+<h2>This is show demo app in EmberJS, the futuristic app </h2>
+  <br>
+    This is sample task management app
 </div>
 
 
