@@ -1,31 +1,31 @@
-<div id='cssmenu'>
-<ul>
-   <li><a href='#'><span>Home</span></a></li>
-   <li class='active has-sub'><a href='#'><span>Task</span></a>
-      <ul>
-         <li class='has-sub'><a href='#'><span>Create Task</span></a>
-            <ul>
-               <li>{{#link-to 'createtaskforme' }}<span>For me</span>{{/link-to}}</li>
-               <li class='last'>{{#link-to 'createtaskforother' }}<span>For other</span>{{/link-to}}</li>
-            </ul>
-         </li>
-         <li class='has-sub'><a href='#'><span>Task List</span></a>
-            <ul>
-               <li><a href='#'><span>For me</span></a></li>
-               <li class='last'><a href='#'><span>For other</span></a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li><a href='#'><span>About</span></a></li>
-   <li class='last'><a href='#'><span>Contact</span></a></li>
-</ul>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here --></div>
+  </main>
 </div>
-<div id="body">
-<h2>This is show demo app in EmberJS, the futuristic app </h2>
-  <br>
-    This is sample task management app
-</div>
-
-
 {{outlet}}

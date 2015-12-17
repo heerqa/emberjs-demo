@@ -1,171 +1,241 @@
-#cssmenu,
-#cssmenu ul,
-#cssmenu li,
-#cssmenu a {
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+.demo-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+.demo-layout .demo-header .mdl-textfield {
+  padding-top: 27px;
+}
+.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
+  color: rgba(0, 0, 0, 0.54);
+}
+.mdl-layout__drawer .avatar {
+  margin-bottom: 16px;
+}
+.demo-drawer {
   border: none;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
 }
-#productForm .availabilityContainer .form-control-feedback {
-    right: 15px;
-    }
-#body {
-    background-color:blue;
-    color:white;
-    text-align:center;
-    padding:5px;
+/* iOS Safari specific workaround */
+.demo-drawer .mdl-menu__container {
+  z-index: -1;
 }
-#cssmenu {
-  height: 37px;
-  display: block;
-  border: 1px solid;
-  border-radius: 5px;
-  width: auto;
-  border-color: #080808;
-  margin: 0;
-  padding: 0;
+.demo-drawer .demo-navigation {
+  z-index: -2;
 }
-#cssmenu > ul {
-  list-style: inside none;
-  margin: 0;
-  padding: 0;
+/* END iOS Safari specific workaround */
+.demo-drawer .mdl-menu .mdl-menu__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-#cssmenu > ul > li {
-  list-style: inside none;
-  float: left;
-  display: inline-block;
+.demo-drawer-header {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 16px;
+  height: 151px;
+}
+.demo-avatar-dropdown {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  margin: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.demo-navigation {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.demo-layout .demo-navigation .mdl-navigation__link {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+}
+.demo-layout .demo-navigation .mdl-navigation__link:hover {
+  background-color: #00BCD4;
+  color: #37474F;
+}
+.demo-navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
+}
+
+.demo-content {
+  max-width: 1080px;
+}
+
+.demo-charts {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.demo-chart:nth-child(1) {
+  color: #ACEC00;
+}
+.demo-chart:nth-child(2) {
+  color: #00BBD6;
+}
+.demo-chart:nth-child(3) {
+  color: #BA65C9;
+}
+.demo-chart:nth-child(4) {
+  color: #EF3C79;
+}
+.demo-graphs {
+  padding: 16px 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+/* TODO: Find a proper solution to have the graphs
+ * not float around outside their container in IE10/11.
+ * Using a browserhacks.com solution for now.
+ */
+_:-ms-input-placeholder, :root .demo-graphs {
+  min-height: 664px;
+}
+_:-ms-input-placeholder, :root .demo-graph {
+  max-height: 300px;
+}
+/* TODO end */
+.demo-graph:nth-child(1) {
+  color: #00b9d8;
+}
+.demo-graph:nth-child(2) {
+  color: #d9006e;
+}
+
+.demo-cards {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+.demo-cards .demo-separator {
+  height: 32px;
+}
+.demo-cards .mdl-card__title.mdl-card__title {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+}
+.demo-cards ul {
   padding: 0;
 }
-#cssmenu.align-center > ul {
-  text-align: center;
+.demo-cards h3 {
+  font-size: 1em;
 }
-#cssmenu.align-center > ul > li {
-  float: none;
-  margin-left: -3px;
+.demo-updates .mdl-card__title {
+  min-height: 200px;
+  background-image: url('images/dog.png');
+  background-position: 90% 100%;
+  background-repeat: no-repeat;
 }
-#cssmenu.align-center ul ul {
-  text-align: left;
-}
-#cssmenu.align-center > ul > li:first-child > a {
-  border-radius: 0;
-}
-#cssmenu > ul > li > a {
-  outline: none;
-  display: block;
-  position: relative;
-  text-align: center;
+.demo-cards .mdl-card__actions a {
+  color: #00BCD4;
   text-decoration: none;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
-  font-weight: 700;
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  border-right: 1px solid #080808;
-  color: #ffffff;
-  padding: 12px 20px;
 }
-#cssmenu > ul > li:first-child > a {
-  border-radius: 5px 0 0 5px;
-}
-#cssmenu > ul > li > a:after {
-  content: "";
-  position: absolute;
-  border-right: 1px solid;
-  top: -1px;
-  bottom: -1px;
-  right: -2px;
-  z-index: 99;
-  border-color: #3c3c3c;
-}
-#cssmenu ul li.has-sub:hover > a:after {
-  top: 0;
-  bottom: 0;
-}
-#cssmenu > ul > li.has-sub > a:before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  right: 6px;
-  border: 5px solid transparent;
-  border-top: 5px solid #ffffff;
-}
-#cssmenu > ul > li.has-sub:hover > a:before {
-  top: 19px;
-}
-#cssmenu > ul > li.has-sub:hover > a {
-  padding-bottom: 14px;
-  z-index: 999;
-  border-color: #3f3f3f;
-}
-#cssmenu ul li.has-sub:hover > ul,
-#cssmenu ul li.has-sub:hover > div {
-  display: block;
-}
-#cssmenu > ul > li.has-sub > a:hover,
-#cssmenu > ul > li.has-sub:hover > a {
-  background: #3f3f3f;
-  border-color: #3f3f3f;
-}
-#cssmenu ul li > ul,
-#cssmenu ul li > div {
-  display: none;
-  width: auto;
-  position: absolute;
-  top: 38px;
-  background: #3f3f3f;
-  border-radius: 0 0 5px 5px;
-  z-index: 999;
-  padding: 10px 0;
-}
-#cssmenu ul li > ul {
-  width: 200px;
-}
-#cssmenu ul ul ul {
-  position: absolute;
-}
-#cssmenu ul ul li:hover > ul {
-  left: 100%;
-  top: -10px;
-  border-radius: 5px;
-}
-#cssmenu ul li > ul li {
-  display: block;
-  list-style: inside none;
-  position: relative;
+
+.demo-options h3 {
   margin: 0;
-  padding: 0;
 }
-#cssmenu ul li > ul li a {
-  outline: none;
-  display: block;
-  position: relative;
-  font: 10pt Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+.demo-options .mdl-checkbox__box-outline {
+  border-color: rgba(255, 255, 255, 0.89);
+}
+.demo-options ul {
   margin: 0;
-  padding: 8px 20px;
+  list-style-type: none;
 }
-#cssmenu,
-#cssmenu ul ul > li:hover > a,
-#cssmenu ul ul li a:hover {
-  background: #3c3c3c;
-  background: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c3c3c), color-stop(100%, #222222));
-  background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-  background: -o-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-  background: -ms-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-  background: linear-gradient(top, #3c3c3c 0%, #222222 100%);
+.demo-options li {
+  margin: 4px 0;
 }
-#cssmenu > ul > li > a:hover {
-  background: #080808;
-  color: #ffffff;
+.demo-options .material-icons {
+  color: rgba(255, 255, 255, 0.89);
 }
-#cssmenu ul ul a:hover {
-  color: #ffffff;
-}
-#cssmenu > ul > li.has-sub > a:hover:before {
-  border-top: 5px solid #ffffff;
+.demo-options .mdl-card__actions {
+  height: 64px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
