@@ -1,6 +1,5 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
-{{outlet}}
 
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}
@@ -8,7 +7,7 @@
 {{#md-navbar name='Example' class='indigo'}}
   <!-- A workaround to get the "active" class
     to apply to the active <li> automatically -->
-  {{#link-to 'createtaskforme'}}
+  {{#link-to 'createtaskforme' tagName='li'}}
    Task
    {{/link-to}}
 {{/md-navbar}}
@@ -16,18 +15,8 @@
 {{outlet}}
 
 <footer class='page-footer light-blue white-text'>
-    <div class="container">
-        <div class="row">
-            <div class="col m6 s12">
-                <h5>Left</h5>
-            </div>
-            <div class="col m6 s12">
-                <h5>Right</h5>
-            </div>
-        </div>
-    </div>
-    {{#md-copyright text='Copyright Text'
-        startYear=2014
+    {{#md-copyright text='Heer Software Studios'
+        startYear=2016
         class='light-blue darken-2 white-text'}}
         <a class="white-text right" href="#!">
           More Links
