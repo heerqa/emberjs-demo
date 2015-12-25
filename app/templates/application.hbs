@@ -5,13 +5,9 @@
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}
 
-{{#md-navbar name='Example' class='indigo'}}
-  <!-- A workaround to get the "active" class
-    to apply to the active <li> automatically -->
-  {{#link-to 'navbar' tagName='li'}}
-    {{link-to 'Navbar' 'navbar'}}
-  {{/link-to}}
-  {{#link-to 'tabs' tagName='li'}}
-    {{link-to 'Tabs' 'tabs'}}
-  {{/link-to}}
-{{/md-navbar}}
+<div class="row">
+  {{md-input value="test" label='Password' type="password" class="col s12" validate=true}}
+  {{md-input value=65 label='Number' type="number" class="col s12" validate=true}}
+  {{md-input value='(202) 555-1212' label='Phone' type="tel" class="col s12" validate=true}}
+  {{md-input value='test@test.com' label='Email' type="email" class="col s12" validate=true}}
+</div>
