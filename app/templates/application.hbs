@@ -4,11 +4,13 @@
 
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}
-{{#md-card-panel class="teal"
-    bodyClass="white-text"
-    id="card-panel"}}
-        I am a very simple card.
-        I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.
-        I am similar to what is called a panel in other frameworks.
-{{/md-card-panel}}
+{{#md-navbar name='Example' class='indigo' homeRoute='navbar'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
+  {{#link-to 'createtaskforme' tagName='li'}}
+    Tasks
+  {{/link-to}}
+  {{#link-to 'tabs' tagName='li'}}
+    {{link-to 'Tabs' 'tabs'}}
+  {{/link-to}}
+{{/md-navbar}}

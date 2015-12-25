@@ -1,7 +1,6 @@
-<!-- Simple Textfield -->
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" id="sample1">
-    <label class="mdl-textfield__label" for="sample1">Text...</label>
-  </div>
-</form>
+<div class="row">
+  {{md-input value="test" label='Password' type="password" class="col s12" validate=true}}
+  {{md-input value=65 label='Number' type="number" class="col s12" validate=true}}
+  {{md-input value='(202) 555-1212' label='Phone' type="tel" class="col s12" validate=true}}
+  {{md-input value='test@test.com' label='Email' type="email" class="col s12" validate=true}}
+</div>
