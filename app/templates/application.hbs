@@ -1,6 +1,3 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}
 
@@ -8,10 +5,10 @@
   <!-- A workaround to get the "active" class
     to apply to the active <li> automatically -->
   {{#link-to 'createtaskforme' tagName='li'}}
-    {{link-to 'Navbar' 'createtaskforme'}}
+    {{link-to 'Task' 'createtaskforme'}}
   {{/link-to}}
-  {{#link-to 'createtaskforme' tagName='li'}}
-    {{link-to 'Tabs' 'createtaskforme'}}
+  {{#link-to 'listtaskforme' tagName='li'}}
+    {{link-to 'List' 'listtaskforme'}}
   {{/link-to}}
 {{/md-navbar}}
 
