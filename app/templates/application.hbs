@@ -1,7 +1,13 @@
-{{mdl-button isRaised=true text='Raised'}}
-{{mdl-button isRaised=true text='Disabled' disabled=true}}
-{{mdl-button isRaised=true text='No Ripples' hasRipples=false}}
-{{mdl-button isRaised=true text='Accent Raised' isAccent=true}}
+{{#mdl-nav title='Fixed Header Example' fixedHeader=true}}
+  {{mdl-nav-item name='Buttons'   route='buttons'}}
+  {{mdl-nav-item name='Tabs'      route='tabs'}}
+  {{mdl-nav-item name='Nav'       route='navs'}}
+  <div class="mdl-grid">
+  	<div class="mdl-cell mdl-cell--12-col">
+   Some text....
+	</div>
+  </div>
+{{/mdl-nav}}
 
 
 {{outlet}}
