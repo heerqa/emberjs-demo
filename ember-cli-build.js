@@ -20,5 +20,9 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 app.import('bower_components/material-design-lite/material.min.css');
 app.import('bower_components/material-design-lite/material.min.js');
+app.import('bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css');
+app.import('bower_components/bootstrap-material-design/dist/css/ripples.min.css');
+app.import('bower_components/bootstrap-material-design/dist/js/material.min.js');
+app.import('bower_components/bootstrap-material-design/dist/js/ripples.min.js');
   return app.toTree();
 };
