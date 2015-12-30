@@ -4,7 +4,7 @@
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
-  background: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSFRqXUJhl7CzUP-1JLUef4o8qjxdMAdOjBuwutyUiDEzlMzt1h) center / cover;
+  background-image: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSFRqXUJhl7CzUP-1JLUef4o8qjxdMAdOjBuwutyUiDEzlMzt1h) center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
