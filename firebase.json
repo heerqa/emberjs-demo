@@ -1,5 +1,5 @@
 {
-  "firebase": "showapp",
+  "firebase": "builderstorm-qa-e32c9",
   "public": "dist",
   "ignore": [
     "firebase.json",
