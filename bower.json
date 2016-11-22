@@ -17,5 +17,8 @@
     "matchMedia": "0.2.0",
     "materialize": "~0.97.0",
     "material-design-lite": "~1.0.4"
+  },
+  "resolutions": {
+    "jquery": "2.1.4"
   }
 }
